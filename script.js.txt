@@ -1,0 +1,30 @@
+// Set the date for when the exams end
+let examEndDate = new Date("May 30, 2024 17:00:00").getTime();
+
+// Update the countdown every 1 second
+let countdownInterval = setInterval(function() {
+
+    // Get today's date and time
+    let now = new Date().getTime();
+
+    // Calculate the time difference
+    let timeLeft = examEndDate - now;
+
+    // Time calculations for days, hours, minutes, and seconds
+    let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    // Display the result in the respective elements
+    document.getElementById("days").innerHTML = days;
+    document.getElementById("hours").innerHTML = hours;
+    document.getElementById("minutes").innerHTML = minutes;
+    document.getElementById("seconds").innerHTML = seconds;
+
+    // If the countdown is over, display a message
+    if (timeLeft < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("countdown").innerHTML = "Exams are over! 🎉";
+    }
+}, 1000);
