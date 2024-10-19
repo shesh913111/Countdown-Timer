@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Countdown to Your Exams Ending!</h1>
+        <div id="countdown">
+            <div><span id="days"></span> Days</div>
+            <div><span id="hours"></span> Hours</div>
+            <div><span id="minutes"></span> Minutes</div>
+            <div><span id="seconds"></span> Seconds</div>
+        </div>
+        <p class="message">Focus on your exams, I'll be waiting! 😊</p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
